@@ -35,6 +35,7 @@ const handleToclearWord =() =>{
             var text = document.getElementById("mybox");
             text.select();
             navigator.clipboard.writeText(text.value);
+            document.getSelection().removeAllRanges();
             props.showAlert("Text copied to clipboard","success");
     }
 
@@ -44,19 +45,19 @@ const handleToclearWord =() =>{
     return(       
         <>
         <div className="contaner" style ={{color: props.mode==='light'?'black':'white'}}>
-        <h1>{props.head}</h1>
+        <h1 className="mb-4">{props.head}</h1>
         <div className="mb-3">
         <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor: props.mode==='light'?'white':'#343a40', color: props.mode==='light'?'black':'white' }} id="mybox" rows="9"></textarea>
         </div>
-            <button className='btn btn-primary mx-2 my-2' onClick={handleOnClick}>Convert to Upper Case</button>
-            <button className='btn btn-primary mx-2 my-2' onClick={handleLowClick}>Convert to Lower Case</button>
-            <button className='btn btn-primary mx-2 my-2' onClick={handleToClear}>Clear text</button>
-            <button className='btn btn-primary mx-2 my-2' onClick={handleToclearWord}>Add full stop</button>
-            <button className='btn btn-primary mx-2 my-2' onClick={handlecopy}>copy text</button>
+            <button disabled={text.length===0} className='btn btn-primary mx-2 my-2' onClick={handleOnClick}>Convert to Upper Case</button>
+            <button disabled={text.length===0}  className='btn btn-primary mx-2 my-2' onClick={handleLowClick}>Convert to Lower Case</button>
+            <button disabled={text.length===0}  className='btn btn-primary mx-2 my-2' onClick={handleToClear}>Clear text</button>
+            <button disabled={text.length===0}  className='btn btn-primary mx-2 my-2' onClick={handleToclearWord}>Add full stop</button>
+            <button disabled={text.length===0}  className='btn btn-primary mx-2 my-2' onClick={handlecopy}>copy text</button>
         </div>
         <div className="contaner my-2"  style ={{color: props.mode==='light'?'black':'white'}}>
             <h1>Your text summery</h1>
-            <p>{text.split(" ").length-1} words and {text.length} characters</p>
+            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
             <p>{0.008*(text.split(" ").length-1)} minutes to read</p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"enter to preview the text"}</p>

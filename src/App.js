@@ -33,12 +33,12 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#343a40';
       showAlert("Dark mode has been enabled","success");
-      document.title = "Text Utils- home(dark)";
+      // document.title = "Text Utils- home(dark)";
     }else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled","success");
-      document.title = "Text Utils- home";
+      // document.title = "Text Utils- home";
     }
     
 
@@ -52,7 +52,7 @@ function App() {
    <div className="container my-3">
    {/* <Routes>
     <Route exact path="/about" element={<About mode={mode}/>} /> */}
-    <TextForm head="Enter your text to analyse" mode={mode} showAlert={showAlert}/>
+    <TextForm head="Manipulate your TexT- Word counter | UpperCase to LowerCase" mode={mode} showAlert={showAlert}/>
 {/* </Routes>            */}
    </div>
    {/* </Router> */}
