@@ -31,10 +31,9 @@ const handleToclearWord =() =>{
         setText(event.target.value);
 }
     const handlecopy =()=>{
-            console.log("i am copy function");
-            var text = document.getElementById("mybox");
-            text.select();
-            navigator.clipboard.writeText(text.value);
+           
+            
+            navigator.clipboard.writeText(text);
             document.getSelection().removeAllRanges();
             props.showAlert("Text copied to clipboard","success");
     }
@@ -57,7 +56,7 @@ const handleToclearWord =() =>{
         </div>
         <div className="contaner my-2"  style ={{color: props.mode==='light'?'black':'white'}}>
             <h1>Your text summery</h1>
-            <p>{text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
+            <p>{text.split(/\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
             <p>{0.008*(text.split(" ").length-1)} minutes to read</p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"enter to preview the text"}</p>
