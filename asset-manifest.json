@@ -1,7 +1,7 @@
 {
   "main.css": "/Manipulating-Text/static/css/main.e24284a6.chunk.css",
-  "main.js": "/Manipulating-Text/static/js/main.7e93fc44.chunk.js",
-  "main.js.map": "/Manipulating-Text/static/js/main.7e93fc44.chunk.js.map",
+  "main.js": "/Manipulating-Text/static/js/main.3e2472a7.chunk.js",
+  "main.js.map": "/Manipulating-Text/static/js/main.3e2472a7.chunk.js.map",
   "static/js/1.3c11774c.chunk.js": "/Manipulating-Text/static/js/1.3c11774c.chunk.js",
   "static/js/1.3c11774c.chunk.js.map": "/Manipulating-Text/static/js/1.3c11774c.chunk.js.map",
   "static/js/2.2b8e7308.chunk.js": "/Manipulating-Text/static/js/2.2b8e7308.chunk.js",
@@ -10,6 +10,6 @@
   "runtime~main.js.map": "/Manipulating-Text/static/js/runtime~main.e4cffd4d.js.map",
   "static/css/main.e24284a6.chunk.css.map": "/Manipulating-Text/static/css/main.e24284a6.chunk.css.map",
   "index.html": "/Manipulating-Text/index.html",
-  "precache-manifest.395207b176f297ca3d04246f9902012f.js": "/Manipulating-Text/precache-manifest.395207b176f297ca3d04246f9902012f.js",
+  "precache-manifest.3bb8f6697144487bedcd049da0a26002.js": "/Manipulating-Text/precache-manifest.3bb8f6697144487bedcd049da0a26002.js",
   "service-worker.js": "/Manipulating-Text/service-worker.js"
 }
